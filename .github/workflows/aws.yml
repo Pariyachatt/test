@@ -37,6 +37,9 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Deploy main
+      
+      - name: test
+          
         uses: reggionick/s3-deploy@v3
         with:
           folder: test
@@ -44,4 +47,3 @@ jobs:
           bucket-region: '${{ secrets.S3_BUCKET_REGION }}'
           delete-removed: true
           no-cache: true
-          private: true
