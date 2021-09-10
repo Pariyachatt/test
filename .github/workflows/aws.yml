@@ -40,8 +40,10 @@ jobs:
       
         uses: reggionick/s3-deploy@v3
         with:
-          working-directory: .
+          working-directory: ./test
           bucket: '${{ secrets.S3_BUCKET }}'
           bucket-region: '${{ secrets.S3_BUCKET_REGION }}'
+          dist-id: ${{ secrets.CLOUDFRONT_DISTRIBUTION_ID }}
           delete-removed: true
           no-cache: true
+          private: true
