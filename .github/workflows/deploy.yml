@@ -39,7 +39,7 @@ jobs:
       - name: Deploy main
         uses: reggionick/s3-deploy@v3
         with:
-          folder: ./test/
+          folder: .test/
           bucket: '${{ secrets.S3_BUCKET }}'
           bucket-region: '${{ secrets.S3_BUCKET_REGION }}'
           delete-removed: true
